@@ -11,9 +11,16 @@ body {
     background: linear-gradient(180deg, #009688 10%, #DADBD4 10%);
     height: 100vh;
 }
+
+img {
+    max-width: 100%;
+}
+
+/* GENERAL  */
+
 .container {
     margin: 0 auto;
-    width: 80%;
+    width: 90%;
     display: flex;
 }
 .left-side {
@@ -22,6 +29,7 @@ body {
     height: 80vh;
     overflow-y: auto;
     background-color: whitesmoke;
+    color: #b6babf;
     
 }
 
@@ -31,7 +39,40 @@ body {
     height: 80vh;
     overflow-y: auto;
     background-image: url(/img/sfondo.png);
+    color: #b6babf;
 }
+
+
+/* TOP LEFT & RIGHT SIDE  */
+
+.avatar-img {
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+
+}
+
+.avatar {
+    padding-left: .5rem;
+}
+
+.flex {
+    display: flex;
+    align-items: center;
+  
+}
+
+.name {
+    flex-grow: .9;
+    color: black;
+}
+
+.icons i {
+    padding-left: .5rem;
+}
+
+
+/* LEFT SIDE BLUE PART - RECEIVE NOTIFICATIONS */
 
 .top-left,
 .top-right {
@@ -41,6 +82,7 @@ body {
 
 .top-left {
     border-right: 1px solid #d6d6d6;
+    
 }
 
 .under-top-left {
@@ -49,10 +91,15 @@ body {
 }
 
 .info {
+    padding: .5rem;
     display: inline-flex;
     justify-content: center;
     align-items: center;
     font-size: 15px;
+}
+
+.text {
+    padding-left: .6rem;
 }
 
 .bell {
@@ -63,8 +110,47 @@ body {
     display: flex;
     justify-content: center;
 }
+
 .bell i {
-  font-size: 24px;
+  font-size: 20px;
   color: #8edafc;
-  padding-top: .7rem;
+  padding-top: .9rem;
+}
+
+/* LEFT SIDE - SEARCH BAR*/
+
+.search button {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 20px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 11px 18px;
+    z-index: 2;
+    color: #b6babf
+  }
+
+  
+.search input {
+    width: 100%;
+    padding: 20px 60px 20px 20px;
+    height: 30px;
+    display: block;
+    padding-left: 3rem;
+    
+  }
+
+  .search {
+    background: white;
+    position: relative;
+    
+  }
+/*RIGHT SIDE */
+
+.current-chat {
+    padding: .5rem;
+    font-size: 12px;
 }
