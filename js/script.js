@@ -175,8 +175,21 @@ createApp({
     methods: {
       changeContact(newContact) { 
         this.activeContact = newContact;
-      }
+      },
 
+    
+
+        addMessage() {
+            if(this.newMessage.length > 0){
+                const message = {
+                    message: this.newMessage,
+                    status: 'sent',
+            
+                }
+
+                this.contacts[this.activeContact].messages.push(message)
+                this.newMessage = "";
+            }  
+        } 
     }
-
   }).mount('#app')
