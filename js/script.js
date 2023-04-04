@@ -1,8 +1,9 @@
-const {createApp} = Vue;
+const { createApp } = Vue;
 
 createApp({
     data() {
       return {
+        activeContact: 0,
         contacts: [
             {
                 name: 'Michele',
@@ -164,15 +165,17 @@ createApp({
                         status: 'received'
                     }
                 ],
-            }
-        ]
+            },
+        ],
         
       };
       
     },
 
     methods: {
-        
+      changeContact() { 
+      
+      }
 
     }
 

@@ -65,8 +65,8 @@
 
                 <!-- LEFT SIDE - CONTACTS  -->
                 <div class="contacts-list">
-                    <div class="contact-item">
-                         <div class="contact-info" v-for="contact in contacts">
+                    <div class="contact-item" v-for="(contact, index) in contacts" @click="changeContact()">
+                         <div class="contact-info" >
                              <img :src="`img/avatar${contact.avatar}.jpg`" alt="">
                                  <div class="contact-name">
                                      <h3>{{ contact.name }}</h3>
@@ -85,9 +85,9 @@
                 <!-- HEADER RIGHT SIDE  -->
                 <header class="header">
                     <div class="avatar">
-                    <img class="avatar-img" src="img/avatar_io.jpg" alt="" />
+                    <img class="avatar-img" :src="`img/avatar${ contacts[activeContact].avatar}.jpg`" alt="" />
                     <div>
-                        <p class="name">Sofia</p>
+                        <p class="name">{{ contacts[activeContact].name}}</p>
                         <p>Ultimo messaggio</p>
                     </div>
                     </div>
@@ -121,6 +121,7 @@
                 </footer>
             </div>
         </div>
+       
     </div>
     <script src="js/script.js"></script>
 </body>
