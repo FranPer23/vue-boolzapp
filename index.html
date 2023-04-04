@@ -34,7 +34,7 @@
                     <img class="avatar-img" src="img/avatar_io.jpg" alt="" />
                     <div>
                         <p class="name">Sofia</p>
-                        <p>Ultimo messaggio</p>
+                        
                     </div>
                     </div>
 
@@ -65,7 +65,7 @@
 
                 <!-- LEFT SIDE - CONTACTS  -->
                 <div class="contacts-list">
-                    <div class="contact-item" v-for="(contact, index) in contacts" @click="changeContact()">
+                    <div class="contact-item" v-for="(contact, index) in contacts" @click="changeContact(index)">
                          <div class="contact-info" >
                              <img :src="`img/avatar${contact.avatar}.jpg`" alt="">
                                  <div class="contact-name">
@@ -102,15 +102,15 @@
                 <!-- RIGHT SIDE MESSAGE  -->
                 <main class="messages-container">
                     
-                    <div class="message-row sent">
+                    <div class="message-row" :class="message.status" v-for="message in contacts[activeContact].messages">
                         <div class="message">
-                            ABC
+                            {{ message.message }}
                         </div>  
                     </div>
 
-                    <div class="message-row received">
+                    <div class="message-row" :class="message.status">
                         <div class="message">
-                            XYZ
+                            {{ message.message }}
                         </div>
                     </div>
                     

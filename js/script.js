@@ -173,8 +173,8 @@ createApp({
     },
 
     methods: {
-      changeContact() { 
-      
+      changeContact(newContact) { 
+        this.activeContact = newContact;
       }
 
     }
