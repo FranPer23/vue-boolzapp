@@ -141,7 +141,7 @@ img {
 
 .contacts-list {
     flex-grow: 1;
-    background-color: #009688;
+    background-color: #ffffff;
 }
 
 .contact-item {
@@ -188,16 +188,28 @@ img {
     width: 40%;
     max-width: 60%;
     border-radius: 5px;
+    padding: 1rem;
+    
 }
 
 .message-row.sent {
-    justify-content: start;
-    background-color: green;
+    justify-content: end;
+   
 }
 
 .message-row.received {
-    justify-content: end;
-    background-color: white;
+    justify-content: start;   
+}
+
+.sent .message {
+    background-color: #d5f9ba ;
+    word-wrap: break-word;
+
+}
+
+.received .message {
+    background-color: #ffffff;
+    word-wrap: break-word;
 }
 
 
@@ -209,3 +221,4 @@ img {
     height: 80px;
     background-color: #f3eeea;
 }
+

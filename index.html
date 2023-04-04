@@ -67,7 +67,7 @@
                 <div class="contacts-list">
                     <div class="contact-item">
                          <div class="contact-info" v-for="contact in contacts">
-                             <img src="./img/avatar_1.jpg" alt="">
+                             <img :src="`img/avatar${contact.avatar}.jpg`" alt="">
                                  <div class="contact-name">
                                      <h3>{{ contact.name }}</h3>
                                      <p>Ultimo messaggio</p>
@@ -107,7 +107,7 @@
                             ABC
                         </div>  
                     </div>
-                    
+
                     <div class="message-row received">
                         <div class="message">
                             XYZ
