@@ -167,6 +167,13 @@ createApp({
             }
         ]
         
-      }
+      };
+      
+    },
+
+    methods: {
+        
+
     }
+
   }).mount('#app')

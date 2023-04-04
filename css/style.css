@@ -6,89 +6,78 @@
     font-family: 'Roboto', sans-serif;
 }
 
-
-body {
-    background: linear-gradient(180deg, #009688 10%, #DADBD4 10%);
-    height: 100vh;
-}
-
 img {
     max-width: 100%;
 }
 
 /* GENERAL  */
 
-.container {
-    margin: 0 auto;
-    width: 90%;
+#app {
+    width: 100%;
+    height: 100vh;
     display: flex;
-}
-.left-side {
-    margin-top: 60px;
-    width: 40%;
-    height: 80vh;
-    overflow-y: auto;
-    background-color: whitesmoke;
-    color: #b6babf;
-    
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(180deg, #009688 10%, #DADBD4 10%);
 }
 
-.right-side {
-    margin-top: 60px;
-    width: 60%;
-    height: 80vh;
-    overflow-y: auto;
-    background-image: url(/img/sfondo.png);
-    color: #b6babf;
+.container {
+    display: flex;
+    width: 80%;
+    height: 90%;
+    min-width: 900px;
+    border: 2px solid grey;
 }
 
+.header {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 80px;
+    background-color: lightgray;
+    padding: 0 10px;
+}
 
-/* TOP LEFT & RIGHT SIDE  */
-
-.avatar-img {
+.avatar img {
     height: 50px;
     width: 50px;
     border-radius: 50%;
-
 }
 
 .avatar {
-    padding-left: .5rem;
-}
-
-.flex {
     display: flex;
     align-items: center;
-  
+    margin-right: 5px;
 }
 
-.name {
-    flex-grow: .9;
-    color: black;
+.left-side {
+    overflow-y: auto;
+    width: 40%;
+    height:  100%;
+   border-right: 1px solid grey;
+   
+}
+
+.right-side {
+    height: 100%;
+    width: 60%;
+    display: flex;
+    flex-direction: column;
 }
 
 .icons i {
-    padding-left: .5rem;
+    color: black;
+    margin-left: .5rem;
+
 }
 
-
-/* LEFT SIDE BLUE PART - RECEIVE NOTIFICATIONS */
-
-.top-left,
-.top-right {
-    height: 70px;
-    background-color: #eaeaea;
-}
-
-.top-left {
-    border-right: 1px solid #d6d6d6;
-    
-}
-
+/* LEFT SIDE  */
 .under-top-left {
     height: 70px;
     background-color: #8edafc;
 }
+
 
 .info {
     padding: .5rem;
@@ -129,7 +118,6 @@ img {
     top: 0;
     left: 0;
     padding: 11px 18px;
-    z-index: 2;
     color: #b6babf
   }
 
@@ -148,9 +136,76 @@ img {
     position: relative;
     
   }
-/*RIGHT SIDE */
 
-.current-chat {
-    padding: .5rem;
-    font-size: 12px;
+/* LEFT SIDE - CONTACTS  */
+
+.contacts-list {
+    flex-grow: 1;
+    background-color: #009688;
+}
+
+.contact-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 5px 10px;
+    flex-direction: column;
+}
+
+.contact-info {
+    display: flex;
+    padding-left: .5rem;
+}
+
+.contact-name {
+    padding-left: .5rem;
+    font-size: .9rem;
+}
+
+.contact-info img {
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+}
+
+
+/* RIGHT SIDE MESSAGE  */
+/* RIGHT SIDE INPUT CURRENT CHAT  */
+
+.messages-container {
+    flex-grow: 1;
+    background-image: url(../img/mine.jpg);
+    padding: 20px 10px;
+}
+
+
+
+.message-row {
+    display: flex;
+    margin-bottom: 5px;
+}
+
+.message {
+    width: 40%;
+    max-width: 60%;
+    border-radius: 5px;
+}
+
+.message-row.sent {
+    justify-content: start;
+    background-color: green;
+}
+
+.message-row.received {
+    justify-content: end;
+    background-color: white;
+}
+
+
+
+
+/* Footer  */
+
+.footer {
+    height: 80px;
+    background-color: #f3eeea;
 }
