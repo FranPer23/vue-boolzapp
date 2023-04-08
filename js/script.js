@@ -179,17 +179,27 @@ createApp({
 
     
 
-        addMessage() {
-            if(this.newMessage.length > 0){
-                const message = {
-                    message: this.newMessage,
-                    status: 'sent',
-            
+      addMessage() {
+        if(this.newMessage.length > 0) {
+            const message = {
+                message: this.newMessage,
+                status: 'sent'
+            }
+    
+            this.contacts[this.activeContact].messages.push(message);
+    
+            // add a setTimeout function to send a response message after 3 seconds
+            setTimeout(() => {
+                const response = {
+                    message: 'ok',
+                    status: 'received'
                 }
-
-                this.contacts[this.activeContact].messages.push(message)
-                this.newMessage = "";
-            }  
-        } 
+                this.contacts[this.activeContact].messages.push(response);
+            }, 3000);
+    
+            this.newMessage = "";
+        }
+    }
+        
     }
   }).mount('#app')
